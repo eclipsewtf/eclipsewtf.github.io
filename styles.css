@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0C0D0D;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #0C0D0D;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.nav-link {
+    padding: 8px 12px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: "Gotham Black", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: none; 
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px; 
+    background-color: transparent; 
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); 
+    transform-origin: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover::after {
+    background-color: #beacff; 
+    transform: scaleX(1);
+}
+
+.nav-link.active::after {
+    background-color: #beacff; 
+    transform: scaleX(1);
+}
+
+.nav-link:hover {
+    color: #beacff; 
+}
+
+.nav-link.active {
+    color: #beacff;
+}
+
+.navbar img {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.navbar button {
+    padding: 8px 12px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: "Gotham Black", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navbar button:hover {
+    color: #beacff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: flex-start;
+}
+
+.left-content h1 {
+    margin-left: 400px;
+    font-family: "Gotham Black", sans-serif;
+    font-size: 48px;
+    color: #beacff;
+    margin-top: 350px; 
+    margin-bottom: 10px;
+}
+
+.main-button {
+    margin-left: 400px;
+    margin-bottom: 450px;
+    padding: 10px 20px;
+    background-color: #beacff;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s; 
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+}
+
+.main-button:hover {
+    background-color: #beacff;
+    transform: scale(1.05);
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 200px;
+}
+
+.image-container {
+    transition: transform 0.3s, skewY 0.3s; 
+    max-width: 100%;
+}
+
+.image-container:hover {
+    transform: scale(1.05) skewY(-4deg);
+}
